@@ -242,7 +242,7 @@ def breasttissue_predict(input, of):
     plt.legend()
     plt.xlabel('Number of neighbors')
     plt.ylabel('Accuracy')
-    # plt.show()
+    plt.show()
 
     # menginisiasi objek dengan hyperparameter 4
     knn = KNeighborsClassifier(n_neighbors=4)
