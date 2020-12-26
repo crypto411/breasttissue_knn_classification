@@ -175,7 +175,6 @@ class Ui_Dialog(object):
         self.label_21.setText(_translate("Dialog", "Fibro-adenom"))
     
     def updateUi(self, prob, result):
-        print(prob, result)
         _translate = QtCore.QCoreApplication.translate
         self.label_14.setText(_translate("Dialog", str(prob[0][1] * 100)) + " %") # Car
         self.label_15.setText(_translate("Dialog", str(prob[0][3] * 100)) + " %") # Fad
@@ -252,7 +251,7 @@ def breasttissue_predict(input, of):
     knn.score(X_test,y_test)
 
     x.columns.values
-    print(dict.fromkeys(y))
+    # print(dict.fromkeys(y))
     # input variabel perumpamaan
     # input  = [[0, 1.1, 10, 0, 1.1, 1.1, 1.1, 1.1, 200]]
     # ['I0', 'PA500', 'HFS', 'DA', 'Area', 'A/DA', 'Max IP', 'DR', 'P']
@@ -263,8 +262,8 @@ def breasttissue_predict(input, of):
 
     predict_proba   = knn.predict_proba(input)
     predict         = knn.predict(input)
-    print(predict_proba)
-    print(predict)
+    # print(predict_proba)
+    # print(predict)
 
     # df.describe()
     of.updateUi(predict_proba, predict)
